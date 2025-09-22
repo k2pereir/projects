@@ -9,57 +9,45 @@ const Home = () => {
   const projects = [
     {
       id: 1,
+      name: 'Mars Rover',
+      color: '#F0F8FF',
+      description: 'Making a Mars Rover!',
+      details: 'Working with the University of Waterloo\'s Watonomous design team to develop the software for a Mars Rover to compete in the University Rover Challenge, focusing on perception and navigation. I am responsible for developing the costmap and path planning algorithms using ROS and C++',
+      link: 'https://github.com/WATonomous/wato_rover',
+      status: 'In progress',
+      technologies: ['ROS, C++'],
+      timeline: 'May 2025 - Current',
+      teamSize: 'Team of 5',
+    },
+    {
+      id: 2,
       name: 'Rock, Paper, Scissors',
-      color: '#f0d7df',
+      color: '#E6E6FA',
       description: 'Rock, paper, scissors match against your computer cam?! ',
-      details: 'Used OpenCV and MediaPipe to collect hand gesture data, then trained a model with TensorFlow to classify the gestures. The model is integrated into a Flask web app that uses the webcam to play rock, paper, scissors against the user',
+      details: "Collected hand gesture data using OpenCV and MediaPipe, then applied data augmentation techniques to increase the dataset to over 15000 lines. I used TensorFlow to train a model to classify the gestures, achieving over 96% accuracy. The model is integrated into a Flask web app that uses the webcam to play rock, paper, scissors against the user.",
       link: 'https://github.com/k2pereir/rockpaperscissors',
       status: 'Finished',
-      technologies: ['Python, Flask, TensorFlow, OpenCV, MediaPipe'],
+      technologies: ['TensorFlow, OpenCV, Python, Flask, MediaPipe'],
       timeline: 'December 2024',
       teamSize: 'Solo Project',
     },
     {
-      id: 2,
+      id: 3,
       name: 'Class Profile',
-      color: '#f7e6da',
-      description: 'MGTE \'29 Class Profile',
-      details: 'Collaborated with classmates to create a web application as a snapshot of our cohort\'s demographics, backgrounds, experiences, and interests. The project involved data collection, front-end and back-end development, and deployment.',
+      color: '#FFF0F5',
+      description: "A snapshot of MGTE \'29",
+      details: 'Collaborated with classmates to create a web application as a snapshot of our cohort\'s demographics, backgrounds, experiences, and interests. The project involved data collection, front-end and back-end development, and deployment using React and Node.js. I was responsible for helping out with front-end development and deployment.',
       link: 'https://github.com/hwtrs/mgte-29-class-profile/tree/main',
       status: 'In progress',
       technologies: ['React, Node.js, SCSS'],
-      timeline: 'April 2025 - Current',
+      timeline: 'Sept 2025 - Current',
       teamSize: 'Team of 15+ people',
     },
     {
-      id: 3,
-      name: 'Sewstainability',
-      color: '#c4dbd9',
-      description: 'Promoting sustainable fashion through clothing resuse and resale',
-      details: 'Developed a platform for users to track their clothing reuse and sell unused clothing on an online marketplace',
-      link: 'https://github.com/k2pereir/technova_project',
-      status: 'Completed',
-      technologies: ['Streamlit, Python, OpenCV'],
-      timeline: 'September 2024',
-      teamSize: 'Team of 3',
-    },
-    {
       id: 4,
-      name: 'Sign Quest',
-      color: '#c8c7d6',
-      description: 'A sign language learning app',
-      details: 'Used OpenCV and MediaPipe to collect hand gesture data, then created a web app that uses the webcam to help users learn sign language',
-      link: 'https://github.com/ohi-711/jamhacks8project',
-      status: 'Finished',
-      technologies: ['OpenCV, MediaPipe, Python'],
-      timeline: 'June 2024',
-      teamSize: 'Team of 4',
-    },
-    {
-      id: 5,
       name: 'Music Tech',
-      color: '#cae0e4',
-      description: 'Creating a music recording app',
+      color: '#FFF5EE',
+      description: 'A music recording app',
       details: 'Developing a music recording app to record, edit, and layer tracks using JUCE',
       link: 'https://github.com/k2pereir/juce',
       status: 'In progress',
@@ -68,18 +56,29 @@ const Home = () => {
       teamSize: 'Solo Project',
     },
     {
-      id: 6,
-      name: 'Mars Rover',
-      color: '#ffcad4',
-      description: 'Developing the software for a Mars Rover',
-      details: 'Working with Watonomous to develop the software for a Mars Rover to compete in the University Rover Challenge, focusing on perception and navigation. I am responsible for developing the costmap and path planning algorithms using ROS and C++',
-      link: 'https://github.com/WATonomous/wato_rover',
-      status: 'In progress',
-      technologies: ['ROS, C++'],
-      timeline: 'May 2025 - Current',
-      teamSize: 'Team of 5',
+      id: 5,
+      name: 'Sign Quest',
+      color: '#F8F4FF',
+      description: 'A sign language learning app',
+      details: "Used OpenCV and MediaPipe to collect hand gesture data, then created a web app to detect user movements and match them to known sign language gestures, providing real-time feedback to help users learn sign language.",
+      link: 'https://github.com/ohi-711/jamhacks8project',
+      status: 'Finished',
+      technologies: ['OpenCV, MediaPipe, Python'],
+      timeline: 'June 2024',
+      teamSize: 'Team of 4',
     },
-    
+    {
+      id: 6,
+      name: 'Sewstainability',
+      color: '#FFFAFA',
+      description: "An online closet web app",
+      details: "Developed a platform for users to upload images of their clothing, track their clothing reuse, and sell/buy clothing on an online thirft store. We used Streamlit for the front-end and looked into incorporating OpenCV for image processing and adding an user authentication system. ",
+      link: 'https://github.com/k2pereir/technova_project',
+      status: 'Completed',
+      technologies: ['Streamlit, Python'],
+      timeline: 'September 2024',
+      teamSize: 'Team of 3',
+    },
   ];
 
   const handleFileHover = (fileId) => {
@@ -106,7 +105,7 @@ const Home = () => {
         <div className="folder-body">
           <div className="folder-tab"></div>
           <div className="folder-label">
-            <span>My Projects</span>
+            <span>Kaelyn's Projects</span>
           </div>
           
           <div className="files-container">
@@ -133,7 +132,7 @@ const Home = () => {
         <div className="sheet-overlay" onClick={closeSheet}>
           <div className="project-sheet" onClick={(e) => e.stopPropagation()}>
             <button className="close-button" onClick={closeSheet}>×</button>
-            <div className="sheet-header" style={{ backgroundColor: selectedFile.color }}>
+            <div className="sheet-header" style={{ backgroundColor: selectedFile.color}}>
               <h2>{selectedFile.name}</h2>
             </div>
             <div className="sheet-content">
