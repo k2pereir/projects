@@ -195,13 +195,12 @@ a website where you can review films
              content: `# FIFA winner predictor
 
 ## why
-my friend and i go crazy over the world cup. and luckily i was in school this summer
-so i was able to watch most of the matches. but i wanted my favorite team (england) to win.
+my friend and i go crazy over the world cup, luckily i was in school this summer
+so i was able to watch most of the matches. i wanted my favorite team (england) to win. 
 and i was confident they would, i just needed proof...
 
 ## how it works
-- collected and cleaned historical FIFA data on elo ratings, team rankings, group standings, player stats, squad info,
-and winning bets from DraftKings sportsbook odds
+- collected and cleaned historical FIFA data on elo ratings, team rankings, group standings, player stats, squad info, and winning bets from DraftKings sportsbook odds
 - we were to train a model based on this to predict the winner (unfortunately did not end up finishing before the final match)
 `,
            },

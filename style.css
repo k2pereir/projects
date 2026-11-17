@@ -273,6 +273,7 @@ body { transition: background .4s ease; }
  padding: 14px;
 }
 .grid .icon { position: static; width: auto; }
+.grid .icon .label { width: 100%; overflow-wrap: anywhere; }
 .grid .empty { color: var(--muted); grid-column: 1 / -1; margin: 8px 0; font-size: 12px; }
 .statusbar {
  border-top: 1px solid var(--hair);
