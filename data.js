@@ -39,7 +39,7 @@ ps: there are hidden files in here ;)
    projects: {
      type: 'dir',
      children: {
-       'personal website': {
+       'personal_website': {
          type: 'dir',
          meta: { kind: 'website', created: 'Nov 2026' },
          children: {
@@ -70,7 +70,7 @@ you can pick what you want to see, drag things around, the experience is wholly 
          },
        },
 
-       'FIFA optimization': {
+       'FIFA_optimization': {
          type: 'dir',
          meta: { kind: 'model', created: 'Aug 2026' },
          children: {
@@ -97,7 +97,7 @@ based off the Canadian Operational Research Society (CORS) OR Challenge 2026
          },
        },
 
-       'rock, paper, scissors': {
+       'rock_paper_scissors': {
          type: 'dir',
          meta: { kind: 'website', created: 'Dec 2025' },
          children: {
@@ -130,7 +130,7 @@ computer vision and machine learning so i made a little website i could play aga
          },
        },
 
-       'my gut feeling': {
+       'my_gut_feeling': {
          type: 'dir',
          meta: { kind: 'website', created: 'Nov 2025' },
          children: {
@@ -159,7 +159,7 @@ understand how their diet may be affecting their digestive health.
          },
        },
 
-       'movie review website': {
+       'movie_reviews': {
          type: 'dir',
          meta: { kind: 'website', created: 'summer 2026' },
          children: {
@@ -186,7 +186,7 @@ a website where you can review films
          },
        },
 
-       'FIFA winner predictor': {
+       'FIFA_winner_predictor': {
          type: 'dir',
          meta: { kind: 'website', created: 'summer 2026' },
          children: {
