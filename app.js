@@ -831,7 +831,7 @@ in the terminal
      ];
      case 'help': return [
        ['keyboard shortcuts', () => openText('shortcuts', 'shortcuts.txt', SHORTCUTS)],
-       ['what is this?', () => openPath(['projects', 'this-website', 'README.md'])],
+       ['what is this?', () => openPath(['projects', 'personal_website', 'README.md'])],
      ];
      default: return [];
    }
