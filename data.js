@@ -17,10 +17,10 @@ const FS = {
  children: {
    'about.txt': {
      type: 'file',
-     content: `hi, i'm kaelyn :)
+     content: `hi, i'm kaelyn!
 
 i'm a programmer. 
-i like building small, thoughtful things.
+i like building cool stuff.
 i love software that feels nice to use.
 
 right now:
@@ -29,34 +29,34 @@ right now:
  - learning @ uwaterloo
 
 this is my website! poke around, have fun :D 
-double click the folders, peek around files
-or feel free to open the terminal if you'd rather type.
+double click the folders, peek around files,
+feel free to open the terminal if you'd rather type.
 
-ps: there are hidden files in here ;)
+glad you're here :)
 `,
    },
 
    projects: {
      type: 'dir',
      children: {
-       'personal_website': {
+       'portfolio': {
          type: 'dir',
          meta: { kind: 'website', created: 'Nov 2026' },
          children: {
            'README.md': {
              type: 'file',
-             content: `# personal website
+             content: `# my portfolio website
 
-a personal site that pretends to be a computer!
+a website that pretends to be a computer!
 
 ## why
-i wanted my website to feel like poking around someone's desktop. 
+i wanted my portfolio to feel like poking around my desktop. 
 you can pick what you want to see, drag things around, the experience is wholly yours
 
 ## how it works
 - the whole file system is one js object in data.js
 - finder windows and the terminal read the same tree
-- cd in the terminal moves your finder window too
+- open up the terminal and use regular commands to navigate the file system, or just click around 
 `,
            },
            'stack.json': {
@@ -83,7 +83,7 @@ final project for my modelling in operations research course.
 based off the Canadian Operational Research Society (CORS) OR Challenge 2026
 
 ## how it works
-- outputs the group stage matches for the FIFA 2026 world cup optimized for weather, travel times, and minimal time zone crossings
+- outputs the optimal group stage matches for the FIFA 2026 world cup optimized for weather, travel times, and minimal time zone crossings
 `,
            },
            'stack.json': {
@@ -99,7 +99,7 @@ based off the Canadian Operational Research Society (CORS) OR Challenge 2026
 
        'rock_paper_scissors': {
          type: 'dir',
-         meta: { kind: 'website', created: 'Dec 2025' },
+         meta: { kind: 'website'},
          children: {
            'README.md': {
              type: 'file',

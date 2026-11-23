@@ -442,7 +442,7 @@
        grid.append(makeIcon(name, child, childSegs, child.type === 'dir' ? () => go(childSegs) : () => openPath(childSegs)));
      }
      if (!entries.length) grid.append(h('p', { class: 'empty' }, 'this folder is empty'));
-     status.textContent = `${entries.length} item${entries.length === 1 ? '' : 's'}` + (node.meta ? ` · ${node.meta.kind} · ${node.meta.status}` : '');
+     status.textContent = `${entries.length} item${entries.length === 1 ? '' : 's'}` + (node.meta ? `` : '');
      renderDock();
    }
 
@@ -594,12 +594,12 @@
      help() {
        print([
          'commands:',
-         '  ls [-a] [dir]    list files (-a shows hidden ones)',
+         '  ls [-a]          list files (-a shows hidden ones)',
          '  cd <dir>         change directory (moves your finder window too)',
          '  cat <file>       print a file',
          '  open <path>      open it in a window',
          '  tree [-a]        show everything',
-         '  whoami, neofetch, pwd, history, date, echo, clear, exit',
+         '  whoami, neofetch, pwd, history, date, clear, exit',
          '',
          'tab completes · ↑/↓ for history · ctrl+l clears',
        ].join('\n'));
@@ -660,10 +660,10 @@
      echo(args) { print(args.join(' ')); },
      clear() { out.innerHTML = ''; },
      exit() { closeWindow(win.el); },
-     sudo() { print('nice try. this incident will be reported.'); },
-     rm() { print('rm: permission denied (this computer is read-only, but i respect the energy)'); },
-     vim() { print("you're stuck in vim forever now. (jk. try `cat` instead)"); },
-     ssh() { print('ssh: you are already inside my computer'); },
+     sudo() { print('haha nice try lol'); },
+     rm() { print('why do you want to delete things?? TT'); },
+     vim() { print("why"); },
+     ssh() { print('where are you even trying to go?'); },
    };
    commands.dir = commands.ls;
    commands.emacs = commands.nano = commands.vi = commands.vim;
@@ -737,7 +737,7 @@
    });
 
 
-   print(`welcome to kaelyn-os. type \`help\` to see what you can do.`, 'dim');
+   print(`type \`help\` to see what you can do :)`, 'dim');
    updatePrompt();
    setTimeout(() => input.focus(), 60);
    return win;
@@ -831,7 +831,7 @@ in the terminal
      ];
      case 'help': return [
        ['keyboard shortcuts', () => openText('shortcuts', 'shortcuts.txt', SHORTCUTS)],
-       ['what is this?', () => openPath(['projects', 'personal_website', 'README.md'])],
+       ['what is this?', () => openPath(['projects', 'portfolio', 'README.md'])],
      ];
      default: return [];
    }
@@ -1045,8 +1045,6 @@ in the terminal
 
  // ───────────── boot ─────────────
  const BOOT = [
-   ['kaelyn-os v1.0.0', null],
-   ['', null],
    ['starting desktop', '...'],
  ];
 
